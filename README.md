@@ -23,7 +23,7 @@ parts (http, templating engine, etc...) like:
 
 Then you can read all configuration files with simple:
 
-```
+```javascript
 var config = loadConfig(path.join(__dirname, 'config'));
 ```
 
