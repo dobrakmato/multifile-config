@@ -14,12 +14,21 @@
   "author": "Matej Kormuth",
   "license": "MIT",
   "devDependencies": {
+    "@types/chai": "^4.0.4",
+    "@types/mocha": "^2.2.42",
     "chai": "^4.1.0",
     "mocha": "^3.4.2",
     "nyc": "^11.1.0"
   },
-  "dependencies": {
-    "@types/chai": "^4.0.4",
-    "@types/mocha": "^2.2.42"
-  }
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dobrakmato/multifile-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dobrakmato/multifile-config/issues"
+  },
+  "homepage": "https://github.com/dobrakmato/multifile-config#readme"
 }
