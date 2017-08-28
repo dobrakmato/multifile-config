@@ -1,0 +1,25 @@
+{
+  "name": "multifile-config",
+  "version": "1.0.0",
+  "description": "Split configuration to multiple files.",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc --reporter=text mocha tests --recursive"
+  },
+  "keywords": [
+    "config",
+    "configuration",
+    "multifile"
+  ],
+  "author": "Matej Kormuth",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.1.0",
+    "mocha": "^3.4.2",
+    "nyc": "^11.1.0"
+  },
+  "dependencies": {
+    "@types/chai": "^4.0.4",
+    "@types/mocha": "^2.2.42"
+  }
+}
