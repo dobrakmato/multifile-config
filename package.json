@@ -4,7 +4,8 @@
   "description": "Split configuration to multiple files.",
   "main": "index.js",
   "scripts": {
-    "test": "nyc --reporter=text mocha tests --recursive"
+    "test": "nyc --reporter=text --reporter=lcov mocha tests --recursive",
+    "report-coverage": "codecov"
   },
   "keywords": [
     "config",
@@ -18,7 +19,8 @@
     "@types/mocha": "^2.2.42",
     "chai": "^4.1.0",
     "mocha": "^3.4.2",
-    "nyc": "^11.1.0"
+    "nyc": "^11.1.0",
+    "codecov": "^2.3.0"
   },
   "directories": {
     "test": "tests"
