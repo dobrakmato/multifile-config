@@ -15,6 +15,14 @@ var loadConfig = function (directory) {
 
     fs.readdirSync(directory).forEach(function (file) {
         var partialConfig = require(path.join(directory, file));
+
+        // When transpiling files using Babel.js the exported object has a name 'default' so
+        // we check if returned object is esModule and has export with name 'default' and then
+        // use this export instead of object returned by require().
+        if (partialConfig.hasOwnProperty('default') && partialConfig.hasOwnProperty('__esModule')) {
+            partialConfig = partialConfig.default;
+        }
+
         config = Object.assign(config, partialConfig);
     });
 

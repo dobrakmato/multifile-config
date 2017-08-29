@@ -21,3 +21,19 @@ describe('function loadConfig()', function () {
     });
 
 });
+
+describe('function loadConfig() with babel-transpiled config files', function () {
+
+    var config = loadConfig(path.join(__dirname, 'babel-transpiled-config'));
+
+    it('should contain variable from file1', function () {
+        expect(config).property('file1');
+        expect(config.file1.variable).to.equal(10);
+    });
+
+    it('should contain variable from file2', function () {
+        expect(config).property('file2');
+        expect(config.file2.variable).to.equal('test');
+    });
+
+});
