@@ -7,5 +7,4 @@
  *
  * @return {any} all configuration files merged to single object
  */
-export = function loadConfig(directory: string): any {
-};
+export = function loadConfig(directory: string): any;
