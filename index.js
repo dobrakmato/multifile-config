@@ -14,6 +14,14 @@ var loadConfig = function (directory) {
     var config = {};
 
     fs.readdirSync(directory).forEach(function (file) {
+
+        // Different transpilers / compilers often produce source maps alongside transpiled
+        // files. We should ignore these files as they do not contain configuration not even
+        // valid JavaScript code.
+        if (path.extname(file) === '.map') {
+            return;
+        }
+
         var partialConfig = require(path.join(directory, file));
 
         // When transpiling files using Babel.js the exported object has a name 'default' so
